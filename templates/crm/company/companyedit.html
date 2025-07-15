@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Company {% endblock title %}
+
+{% block content %}
+
+{% include 'crm/companynavbar.html' %}
+
+<h1> New Contact</h1>
+<form method="POST">
+    {% csrf_token %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-4"> Name </div>
+    <div class="col-8"> {{form.name}}</div>
+    <div class="col-4"> Industry  </div>
+    <div class="col-8"> {{form.industry}} </div>
+    <div class="col-4"> Phone  </div>
+    <div class="col-8"> {{form.phone}}  </div>
+    <div class="col-4"> Company  </div>
+    <div class="col-8"> {{form.company}}  </div>
+    <div class="col-4"> Address  </div>
+    <div class="col-8"> {{form.addressLineOne}} </div>
+    <div class="col-4"> City</div>
+    <div class="col-8"> {{form.city}} </div>
+    <div class="col-4"> State </div>
+    <div class="col-8"> {{form.stateProv}} </div>
+    <div class="col-4"> Zip Code </div>
+    <div class="col-8"> {{form.zipcode}} </div>
+    <div class="col-4"> Notes  </div>
+    <div class="col-8"> {{form.notes}} </div>
+
+
+  </div>
+</div>
+
+
+
+    <input type="submit" class="btn btn-success" value="Save">
+</form>
+
+<br> <br>
+
+ <a href="{% url 'contact_delete' contact.id %}" class="btn btn-danger"> Delete Contact</a>
+
+
+{% endblock content %}

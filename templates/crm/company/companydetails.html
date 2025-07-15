@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title} {{contact.firstname}} {{contact.lastname}} {% endblock title}
+
+{% block content %}
+
+{% include 'crm/companynavbar.html' %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-4"> Name  </div>
+    <div class="col-8"> {{company.name}}  </div>
+    <div class="col-4"> Industry  </div>
+    <div class="col-8"> {{company.industry}} </div>
+    <div class="col-4"> Phone  </div>
+    <div class="col-8"> {{company.phone}}  </div>
+    <div class="col-4"> Address  </div>
+    <div class="col-8"> {{company.addressLineOne}} <br> {{company.city}} <br> {{company.stateProv}} <br> {{company.zipcode}} </div>
+    <div class="col-4"> Notes  </div>
+    <div class="col-8"> {{company.notes}} </div>
+
+
+  </div>
+</div>
+
+
+
+
+    <br> <br> <br>
+
+    <a href="{% url 'companyedit' company.id %}" class="btn btn-warning"> Edit Company</a>
+
+
+ 
+
+
+{% endblock content %}
