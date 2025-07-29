@@ -1,0 +1,17 @@
+.container {
+    background-color: none;
+    background-image: url('../img/primeCRM.png');
+}
+
+.h1 {
+    color: white;
+    background-color: white;
+}
+
+.white {
+    color: white;
+    text-shadow: -1px -1px 0 black,
+                     1px -1px 0 black,
+                     -1px 1px 0 black,
+                     1px 1px 0 black; /* Outline color and thickness */
+}

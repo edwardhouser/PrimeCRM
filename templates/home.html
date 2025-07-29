@@ -1,14 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} Welcome to PrimeCRM {% endblock title %}
 
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extracss %}
+
 {% block content %}
 
+
+<div class="d-flex vh-100 text-center">
     <main class="px-3"> 
-        <h1>This is PrimeCRM</h1> 
-        <p class="lead">PrimeCRM is a Customer Relationship Management tool that is simple, web-based, affordable, and built for you.  We're not here to bill you every month, we just want to give you a simple CRM that will grow with you as more people switch to it.  </p> 
+        <br><br><br><br><br><br><br>
+        <h1 class="white">This is PrimeCRM</h1> 
+        <p class="lead white">PrimeCRM is a Customer Relationship Management tool that is simple, web-based, affordable, and built for you.  We're not here to bill you every month, we just want to give you a simple CRM that will grow with you as more people switch to it.  </p> 
         
         <p class="lead"> <a href="{% url 'features' %}" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a> </p> </main> 
+
+</div>
 
 
 {% endblock content %}
