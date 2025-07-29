@@ -31,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = [
-    'primecrm.onrender.com'
+    'primecrm.onrender.com',
     '127.0.0.1'
 ]
 
