@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Deal {% endblock title %}
+
+{% block content %}
+
+{% include 'crm/dealnavbar.html' %}
+
+<h1> Edit Deal</h1>
+<form method="POST">
+    {% csrf_token %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-4"> Title </div>
+    <div class="col-8"> {{form.title}}</div>
+    <div class="col-4"> Expected Close Date  </div>
+    <div class="col-8"> <input type="date" name="expectedclosedate" id="id_expectedclosedate" value="{{deal.expectedclosedate|date:'Y-m-d'}}" required> </div>
+    <div class="col-4"> Amount ($) </div>
+    <div class="col-8"> {{form.amount}}  </div>
+    <div class="col-4"> Company  </div>
+    <div class="col-8"> {{form.company}} </div>
+    <div class="col-4"> Notes</div>
+    <div class="col-8"> {{form.notes}} </div>
+    <div class="col-4"> Status </div>
+    <div class="col-8"> {{form.status}} </div>
+
+
+  </div>
+</div>
+
+
+
+    <input type="submit" class="btn btn-success" value="Save">
+</form>
+
+<br> <br>
+
+ <a href="{% url 'deal_delete' deal.id %}" class="btn btn-danger"> Delete Deal</a>
+
+
+{% endblock content %}

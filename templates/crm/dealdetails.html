@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title} {{deal.title}} {% endblock title}
+
+{% block content %}
+
+{% include 'crm/dealnavbar.html' %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-4"> Title  </div>
+    <div class="col-8"> {{deal.title}}  </div>
+    <div class="col-4"> Expected close date  </div>
+    <div class="col-8"> {{deal.expectedclosedate}}</div>
+    <div class="col-4"> Amount ($)  </div>
+    <div class="col-8"> {{deal.amount}} </div>
+    <div class="col-4"> Company  </div>
+    <div class="col-8"> {{deal.company}} </div>
+    <div class="col-4"> Notes  </div>
+    <div class="col-8"> {{deal.notes}} </div>
+    <div class="col-4"> Status  </div>
+    <div class="col-8"> {{deal.status}} </div>
+
+
+  </div>
+</div>
+
+
+
+
+    <br> <br> <br>
+
+    <a href="{% url 'dealedit' deal.id %}" class="btn btn-warning"> Edit Deal</a>
+
+
+ 
+
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %} My Deals {% endblock title %}
+
+{% block content %}
+
+{% include 'crm/dealnavbar.html' %}
+
+
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">See Details</th>
+      <th scope="col">Title</th>
+      <th scope="col">Amount </th>
+      <th scope="col">Company</th>
+      <th scope="col">Status</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for deal in deal_list %}
+    <tr>
+      <th scope="row">{{deal.id}}</th>
+      <td><a href=" {% url 'dealdetail' deal.id %}" class="btn btn-primary"> Details </a></td>
+      <td>{{deal.title}}</td>
+      <td>{{deal.amount}}</td>
+      <td>{{deal.company}}</td>
+      <td>{{deal.status}}</td>
+    </tr>
+    {% endfor %}
+
+    
+  </tbody>
+</table>
+   
+{% endblock content %}

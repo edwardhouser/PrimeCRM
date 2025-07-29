@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome Page {% endblock title %}
+
+{% block content%}
+        <main> 
+            <br> <br>
+            <h1 class="text-body-emphasis">Welcome to Prime CRM </h1> 
+            <p class="fs-5 col-md-8"> Prime CRM is a simple and easy to user Customer Relationship Manager that you can use from anywhere to track your contacts and sales activities.  Designed for B2B sales, you can create company and contact records, add notes, compose emails, and track potential business right from the site.  Best of all, your data is YOUR DATA.  We will never use it, sell it, spill it, or compromise your leads in any way.  Your business is your business. </p> <div class="mb-5"> <a href="{% url 'signup' %}" class="btn btn-primary btn-lg px-4">Sign Up for Prime CRM</a> </div> 
+        
+        <hr class="col-3 col-md-2 mb-5"> 
+        <div class="row g-5"> 
+            <div class="col-md-6"> <h2 class="text-body-emphasis">Track Companies and Contacts </h2> 
+                <p> Put in all the important data about your client companies, relate those companies to contacts and deals, and get your sales pipeline filled</p>
+                <ul class="list-unstyled ps-0"> 
+                <li> <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/icons-font" rel="noopener" target="_blank"> <svg class="bi" width="16" height="16" aria-hidden="true"><use xlink:href="#arrow-right-circle"></use></svg>
+                Keep track of all your contacts
+                </a> 
+            </li> 
+            
+            <li> 
+                <a class="icon-link mb-1" href="https://github.com/twbs/examples/tree/main/parcel" rel="noopener" target="_blank"> <svg class="bi" width="16" height="16" aria-hidden="true"><use xlink:href="#arrow-right-circle"></use></svg>
+                Email and Call from the app
+                </a> 
+            </li> 
+            </ul> 
+            </div> 
+
+
+            <div class="col-md-6"> 
+                <h2 class="text-body-emphasis">Close Deals</h2> 
+                <p>Fill your sales pipeline and track each deal by status, phase, and what actions you need to take next. </p> 
+                
+                <ul class="list-unstyled ps-0"> 
+                    <li> <a class="icon-link mb-1" href="../getting-started/introduction"> <svg class="bi" width="16" height="16" aria-hidden="true"><use xlink:href="#arrow-right-circle"></use></svg>
+                    Sort Deals by company, industry, and status
+                        </a> </li> 
+                    <li> <a class="icon-link mb-1" href="../getting-started/webpack"> <svg class="bi" width="16" height="16" aria-hidden="true"><use xlink:href="#arrow-right-circle"></use></svg>
+                    Track your pipeline and sales goals
+                    </a> </li> 
+                    </ul> 
+                </div> 
+            </div> 
+
+
+
+    <br> <br> 
+
+    <div class="container px-4 py-5" id="featured-3"> 
+    
+        <h2 class="pb-2 border-top"> Why Choose PrimeCRM </h2> 
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> 
+        <div class="feature col"> 
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> 
+                <svg class="bi" width="1em" height="1em" aria-hidden="true"><use xlink:href="#collection"></use></svg> 
+            </div> 
+            <h3 class="fs-2 text-body-emphasis">Pay Once </h3> 
+            <p>This isn't some SaaS get rich model where we charge you monthly and hope you forget to turn off renewal.  Prime is a simple CRM that you can use anywhere, anytime.  And we only charge you once. </p> 
+            <a href="{% url 'signup' %}" class="icon-link">
+            Sign Up Today 
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use>
+                </svg> </a> 
+        </div> 
+        <div class="feature col"> 
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> 
+                <svg class="bi" width="1em" height="1em" aria-hidden="true"><use xlink:href="#collection"></use></svg> 
+            </div> 
+            <h3 class="fs-2 text-body-emphasis"> New Features </h3> 
+            <p>We're always adding new features based on user feedback.  You can draft emails right in the browser and then send them via your default mail app.  You can track your deals.  Email us the next thing we should do, and we will </p> 
+            <a href="mailto:edward.houser@gmail.com" class="icon-link">
+            Send us a suggestion 
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use>
+                </svg> </a> 
+        </div> 
+        <div class="feature col"> 
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"> 
+                <svg class="bi" width="1em" height="1em" aria-hidden="true"><use xlink:href="#collection"></use></svg> 
+            </div>  
+            <h3 class="fs-2 text-body-emphasis"> Simple and Secure </h3> 
+            <p>PrimeCRM is a simple and secure CRM.  It doesn't have all the bells and whistles of some other CRMs, but it's not $100 a month, either.  It's the basics.  Exactly what you need to keep following up without anything else.  </p> 
+            <a href="{% url 'signup' %}" class="icon-link">
+            Call to action
+                <svg class="bi" aria-hidden="true"><use xlink:href="#chevron-right"></use>
+                </svg> </a> 
+        </div> 
+    </div>
+    </div>
+</main> 
+    
+{% endblock content %}

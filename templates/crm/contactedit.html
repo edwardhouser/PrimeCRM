@@ -21,9 +21,9 @@
     <div class="col-4"> Company  </div>
     <div class="col-8"> {{form.company}}  </div>
     <div class="col-4"> Birthday  </div>
-    <div class="col-8"> <input type="date" name="birthday" id="id_birthday" value="{{contact.birthday}}" required> </div>
+    <div class="col-8"> <input type="date" name="birthday" id="id_birthday" value="{{contact.birthday|date:'Y-m-d'}}" required> </div>
     <div class="col-4"> Last Contacted Date  </div>
-    <div class="col-8"> <input type="date" name = "lastcontactdate" id= "id_lastcontactdate" value="{{contact.lastcontactdate}}" > </div>
+    <div class="col-8"> <input type="date" name = "lastcontactdate" id= "id_lastcontactdate" value="{{contact.lastcontactdate|date:'Y-m-d'}}" > </div>
     <div class="col-4"> Address  </div>
     <div class="col-8"> {{form.addressLineOne}} </div>
     <div class="col-4"> City</div>

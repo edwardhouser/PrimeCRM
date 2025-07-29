@@ -18,8 +18,6 @@
     <div class="col-8"> {{form.industry}} </div>
     <div class="col-4"> Phone  </div>
     <div class="col-8"> {{form.phone}}  </div>
-    <div class="col-4"> Company  </div>
-    <div class="col-8"> {{form.company}}  </div>
     <div class="col-4"> Address  </div>
     <div class="col-8"> {{form.addressLineOne}} </div>
     <div class="col-4"> City</div>
@@ -42,7 +40,7 @@
 
 <br> <br>
 
- <a href="{% url 'contact_delete' contact.id %}" class="btn btn-danger"> Delete Contact</a>
+ <a href="{% url 'company_delete' company.id %}" class="btn btn-danger"> Delete Company</a>
 
 
 {% endblock content %}

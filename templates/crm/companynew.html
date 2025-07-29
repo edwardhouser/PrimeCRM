@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %} Contact List {% endblock title %}
+{% block title %} New Company {% endblock title %}
 
 {% block content %}
 
-{% include 'crm/contactnavbar.html' %}
+{% include 'crm/companynavbar.html' %}
 
 <h1> New Contact </h1>
 <form method="POST">
@@ -12,18 +12,12 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-4"> Name (First / Last) </div>
-    <div class="col-8"> {{form.firstname}} {{form.lastname}}  </div>
-    <div class="col-4"> Email  </div>
-    <div class="col-8"> {{form.email}} </div>
+    <div class="col-4"> Name </div>
+    <div class="col-8"> {{form.name}}</div>
+    <div class="col-4"> Industry  </div>
+    <div class="col-8"> {{form.industry}} </div>
     <div class="col-4"> Phone  </div>
     <div class="col-8"> {{form.phone}}  </div>
-    <div class="col-4"> Company  </div>
-    <div class="col-8"> {{form.company}}  </div>
-    <div class="col-4"> Birthday  </div>
-    <div class="col-8"> <input type="date" name="birthday" id="id_birthday" required> </div>
-    <div class="col-4"> Last Contacted Date  </div>
-    <div class="col-8"> <input type="date" name = "lastcontactdate" id= "id_lastcontactdate" > </div>
     <div class="col-4"> Address  </div>
     <div class="col-8"> {{form.addressLineOne}} </div>
     <div class="col-4"> City</div>
