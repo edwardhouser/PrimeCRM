@@ -18,3 +18,17 @@ body {
 .prime {
     background-image: url('../img/primeCRM.png'),
 }
+
+@media(max-width: 800px){
+    .table {
+       font-size: .7rem; 
+    }
+
+    .btn {
+        font-size: .7rem;
+    }
+
+    .container {
+        max-width: unset !important;
+    }
+}

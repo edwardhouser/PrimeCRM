@@ -1,0 +1,20 @@
+
+body {
+    background-color: #121b28
+}
+
+.container {
+    background-color: rgb(250, 248, 248)
+}
+
+.navbar {
+    background-color: rgb(206, 206, 210);
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 3px solid black;
+    
+}
+
+.prime {
+    background-image: url('../img/primeCRM.png'),
+}

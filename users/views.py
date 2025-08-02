@@ -13,7 +13,7 @@ class UserLogin(LoginView):
     template_name = "crm/registration/login.html"
 
     def get_success_url(self):
-        return reverse('home')
+        return reverse('company_list')
     
 
 class UserSignup(CreateView):
